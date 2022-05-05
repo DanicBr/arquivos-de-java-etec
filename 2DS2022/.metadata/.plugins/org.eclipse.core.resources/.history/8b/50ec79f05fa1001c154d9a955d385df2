@@ -1,0 +1,21 @@
+import java.util.*;
+public class EntradaComScanner {
+	public static void main (String args[]) {
+		 float largura, comprimento, area, perimetro; Scanner leia;
+		 try {
+			 System.out.println("Entre com o comprimento.");
+			 leia = new Scanner(System.in);
+			 comprimento = leia.nextFloat();
+			 System.out.println("Entre com a largura");
+			 leia = new Scanner(System.in);
+			 largura = leia.nextFloat();
+			 area = comprimento * largura;
+			 perimetro = comprimento * 2 + largura * 2;
+		 
+		 System.out.println("Area do retangulo: " + area);
+		 System.out.println("Perimetro do retangulo: " + perimetro);
+		 }catch(NumberFormatException e) {
+			 System.out.println("Houve um erro na conversão, digite apenas caractres numericos");
+		 }
+	} 
+}
